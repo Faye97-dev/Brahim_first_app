@@ -1,0 +1,13 @@
+
+Modification a faire : 
+- la nomenclature des variables doivent etre significatif dans ton code (en anglais)
+- le nom d'une table ou base de donées commence toujours par une majuscule (en anglais)
+- eviter les mots clés pour la nomenclature des colonnes de la table (en anglais)
+
+// les champs a modifié :
+parcauto -> CarsLocation
+voiture -> Cars 
+numc -> serial_number
+marq -> brand 
+mod -> model
+anneec -> year
