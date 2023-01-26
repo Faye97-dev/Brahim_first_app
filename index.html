@@ -1,49 +1,74 @@
 <!DOCTYPE html>
 <head>
-
-    <meta charset="UTF-8">
-
+  <meta charset="UTF-8" />
+  <link
+    href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+    rel="stylesheet"
+    integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+    crossorigin="anonymous"
+  />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Poppins&display=swap"
+    rel="stylesheet"
+  />
 </head>
-<body>
+<body style="font-family: 'Poppins', sans-serif">
+  <nav class="navbar navbar-dark bg-primary p-2">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-3" href="#">
+        <img src="/logo.jpg" alt="" width="60" />
+        <p class="h3 text-white mt-2">PARC AUTO</p>
+      </a>
+    </div>
+  </nav>
 
-    <center><legend><h1 style="font-size:30px;font-family:Microsoft JhengHei;">PARCAUTO</h1><hr></hr></legend></center>
-    
-    <form action="auto.php" method="POST">
-    
-        <table style="font-size:15px;font-family:Microsoft JhengHei;" border="0" align="center">
-            <tr>
-                <td>MARQUE: </td>
-                <td>
-                    <select type="text" name="marq" value="">
-                        <option></option>
-                        <option>BMW</option>
-                        <option>LAMBORGINI</option>
-                        <option>AUDI</option>
-                        <option>FERARI</option>
-                </td>
-            </tr>
-            <tr>
-                <td>MODEL: </td>
-                <td>
-                    <input type="text" name="modele" value="">
-                </td>
-            </tr>
-            <tr>
-                <td>ANNEE(circulation): </td>
-                <td>
-                    <input type="date" name="anneec" value="date">
-                </td>
-            </tr><tr>
-                <td>PRIX: </td>
-                <td>
-                    <input type="text" name="prix" value="">
-                </td>
-            <tr>
-                <td> </td>
-                <td>
-                    <input type="submit" name="ok" value="valider">
-                </td>
-            </tr>
-        </table>
-    </form>    
+  <div class="container mt-5 mx-5">
+    <div class="d-flex align-items-center justify-content-center">
+      <form action="auto.php" method="POST">
+        <input type="hidden" name="numc" value="<?=$r['numc']?>" />
+
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <label> MARQUE : </label>
+          <select style="width: 250px" type="text" name="marq" value="">
+            <option></option>
+            <option>BMW</option>
+            <option>LAMBORGINI</option>
+            <option>AUDI</option>
+            <option>FERARI</option>
+          </select>
+        </div>
+
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <label> MODEL : </label>
+          <input style="width: 262px" type="text" name="modele" value="" />
+        </div>
+
+        <div class="d-flex align-items-center gap-3 mb-3">
+          <label> ANNEE (circulation) : </label>
+          <input
+            type="date"
+            style="width: 165px; padding: 3px"
+            name="anneec"
+            value="date"
+          />
+        </div>
+
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <label> PRIX : </label>
+          <input type="text" style="width: 283px" name="prix" value="" />
+        </div>
+
+        <div class="d-flex align-items-center gap-3 mb-4">
+          <input
+            type="submit"
+            class="btn btn-primary px-4"
+            name="ok"
+            value="Valider"
+          />
+        </div>
+      </form>
+    </div>
+  </div>
 </body>
